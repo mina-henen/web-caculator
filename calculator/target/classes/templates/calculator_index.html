@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>my calculator</title>
+        <!-- Import Styles -->
+        <link rel="stylesheet" href="styles.css" />
+        <!-- Import Vue.js -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+        <!-- Import axios -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        </head>
+    <body>
+        <div id = "app">
+            <ul>
+                <label class= disp>{{string}}</label>
+            </ul>
+            <ul>
+                <button class="buttonOp" @click= percent>%</button>
+                <button class="buttonCE" @click= clearLabel>CE</button>
+                <button class="buttonOp" @click= del>⌫</button>
+            </ul>
+            <ul>
+                <button class="buttonOp" @click= oneOver><sup>1</sup>/<sub>𝑥</sub></button>
+                <button class="buttonOp" @click= power2>𝑥<sup>2</sup></button>
+                <button class="buttonOp" @click= root>√𝑥</button>
+                <button class="buttonOp" @click= div>/</button>
+            </ul>   
+            <ul>
+                <button class="buttonNum" @click= updateLabel(7)>7</button>
+                <button class="buttonNum" @click= updateLabel(8)>8</button>
+                <button class="buttonNum" @click= updateLabel(9)>9</button>
+                <button class="buttonOp" @click= mult>x</button>
+            </ul>   
+            <ul>
+                <button class="buttonNum" @click= updateLabel(4)>4</button>
+                <button class="buttonNum" @click= updateLabel(5)>5</button>
+                <button class="buttonNum" @click= updateLabel(6)>6</button>
+                <button class="buttonOp" @click= add>+</button>
+            </ul>   
+            <ul>
+                <button class="buttonNum" @click= updateLabel(1)>1</button>
+                <button class="buttonNum" @click= updateLabel(2)>2</button>
+                <button class="buttonNum" @click= updateLabel(3)>3</button>
+                <button class="buttonOp" @click= sub>-</button>
+            </ul>   
+            <ul>
+                <button class="buttonNum" @click= putNeg><sup>+</sup>/<sub>-</sub></button>
+                <button class="buttonNum" @click= updateLabel(0)>0</button>
+                <button class="buttonNum" @click= putPoint>.</button>
+                <button class="buttonEqu" @click= equal>=</button>
+            </ul>
+        </div>
+
+        <!-- Import app -->
+        <script src="main.js"></script>
+    </body>
+</html>
